@@ -15,13 +15,13 @@
          <children>
           <Button fx:id="zeroButton" layoutX="7.0" layoutY="18.0" minWidth="25.0" mnemonicParsing="false" onMouseClicked="#enterZero" prefHeight="25.0" prefWidth="32.0" text="0" />
             <Button fx:id="oneButton" layoutX="50.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#enterOne" prefHeight="25.0" prefWidth="32.0" text="1" />
-            <Button fx:id="additionButton" layoutX="7.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
-            <Button fx:id="subtractionButton" layoutX="51.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="-" />
-            <Button fx:id="multiButton" layoutX="7.0" layoutY="111.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="*" />
-            <Button fx:id="divisionButton" layoutX="51.0" layoutY="111.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="/" />
-            <Button fx:id="equalsButton" layoutX="96.0" layoutY="111.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="47.0" text="=" />
-            <Button fx:id="squaredButton" layoutX="7.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="x²" />
-            <Button fx:id="sqrtButton" layoutX="50.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="√x" />
+            <Button fx:id="additionButton" layoutX="7.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#addClicked" prefHeight="25.0" prefWidth="32.0" text="+" />
+            <Button fx:id="subtractionButton" layoutX="51.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#subtractClicked" prefHeight="25.0" prefWidth="32.0" text="-" />
+            <Button fx:id="multiButton" layoutX="7.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#multiplyClicked" prefHeight="25.0" prefWidth="32.0" text="*" />
+            <Button fx:id="divisionButton" layoutX="51.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#divideClicked" prefHeight="25.0" prefWidth="32.0" text="/" />
+            <Button fx:id="equalsButton" layoutX="96.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#equalClicked" prefHeight="25.0" prefWidth="47.0" text="=" />
+            <Button fx:id="squaredButton" layoutX="7.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#squareClicked" prefHeight="25.0" prefWidth="32.0" text="x²" />
+            <Button fx:id="sqrtButton" layoutX="50.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#sqrtClicked" prefHeight="25.0" prefWidth="32.0" text="√x" />
             <Label fx:id="operationsLabel" layoutX="9.0" layoutY="51.0" text="Operations">
                <font>
                   <Font size="13.0" />
@@ -32,7 +32,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="convertButton" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" text="Convert to/from Decimal" />
+            <Button fx:id="convertButton" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#convertButtonClicked" prefHeight="25.0" prefWidth="152.0" text="Convert to/from Decimal" />
             <Button fx:id="clearButton" layoutX="100.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#clearNumberField" text="Clear" />
          </children>
       </AnchorPane>

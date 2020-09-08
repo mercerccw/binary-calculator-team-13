@@ -49,4 +49,24 @@ public class PrimaryController {
         //runs when subtractionButton is clicked
     }
 
+    @FXML
+    private void squareClicked() {
+        //runs when squaredButton is clicked
+    }
+
+    @FXML
+    private void sqrtClicked() {
+        //runs when sqrtButton is clicked
+    }
+
+    @FXML
+    private void equalClicked() {
+        //runs when equalsButton is clicked
+    }
+
+    @FXML
+    private void convertButtonClicked() {
+        //runs when convertButton is clicked
+    }
+
 }
