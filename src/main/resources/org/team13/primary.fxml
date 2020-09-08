@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="312.0" prefWidth="192.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.team13.PrimaryController">
+<VBox alignment="CENTER" prefHeight="357.0" prefWidth="192.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.team13.PrimaryController">
    <children>
-      <TextField fx:id="numberField" prefHeight="53.0" prefWidth="152.0" />
+      <TextField fx:id="numberField" prefHeight="36.0" prefWidth="152.0" />
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-          <Button fx:id="zeroButton" layoutX="7.0" layoutY="18.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="0" />
-            <Button fx:id="oneButton" layoutX="50.0" layoutY="18.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="1" />
+          <Button fx:id="zeroButton" layoutX="7.0" layoutY="18.0" minWidth="25.0" mnemonicParsing="false" onMouseClicked="#enterZero" prefHeight="25.0" prefWidth="32.0" text="0" />
+            <Button fx:id="oneButton" layoutX="50.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#enterOne" prefHeight="25.0" prefWidth="32.0" text="1" />
             <Button fx:id="additionButton" layoutX="7.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="+" />
             <Button fx:id="subtractionButton" layoutX="51.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="-" />
             <Button fx:id="multiButton" layoutX="7.0" layoutY="111.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="*" />
@@ -32,6 +32,8 @@
                   <Font size="14.0" />
                </font>
             </Label>
+            <Button fx:id="convertButton" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" text="Convert to/from Decimal" />
+            <Button fx:id="clearButton" layoutX="100.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#clearNumberField" text="Clear" />
          </children>
       </AnchorPane>
       <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Secondary View" />
