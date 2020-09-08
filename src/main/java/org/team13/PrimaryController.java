@@ -31,6 +31,7 @@ public class PrimaryController {
 
     @FXML
     private void multiplyClicked() {
+        //NOTE: to get current information from numberField use .getText() method
         //runs when multiButton is clicked
     }
 
