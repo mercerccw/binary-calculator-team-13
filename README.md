@@ -20,3 +20,16 @@ feature, they must branch off of <code>develop</code> (making a new branch with 
 the branch name) and submit a pull request from the completed feature branch to be merged back into <code>develop</code> once they have completed the feature.
 Once all features have been completed on <code>develop</code> for the final version, a final pull request will be submitted and all previous
 work will be merged to <code>master</code>.  
+
+## Meetings
+
+#### 9/8/2020 7:30PM
+
+- Attendance: 
+    - Clayton, Zach, Nicholas
+- Topics: 
+    - Covered project requirements and initial setup
+    - Reviewed git flow and pull request process
+    - Assigned Tasks
+    - Reviewed Sara's pull request and merged
+
