@@ -5,7 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 public class PrimaryController {
-
+    @FXML
+    private Label evaluatedAnswer;
     @FXML
     private TextField numberField;
 
@@ -53,16 +54,34 @@ public class PrimaryController {
     @FXML
     private void squareClicked() {
         //runs when squaredButton is clicked
+
     }
 
     @FXML
     private void sqrtClicked() {
         //runs when sqrtButton is clicked
+        if(numberField != null) {
+            double sqrt = findSqrt(Double.parseDouble(numberField.getCharacters().toString()));
+            System.out.println(sqrt);
+            evaluatedAnswer.setText(Double.toString(sqrt));
+        }
+    }
+
+    public double findSqrt(double n) {
+        double left = 0;
+        double right = n + 1;
+        while(right - left >= 2) {
+            double mid = (left + right) / 2;
+            if(mid * mid <= n) left = mid;
+            else right = mid;
+        }
+        return left;
     }
 
     @FXML
     private void equalClicked() {
         //runs when equalsButton is clicked
+
     }
 
     @FXML
