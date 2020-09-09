@@ -32,4 +32,12 @@ work will be merged to <code>master</code>.
     - Reviewed git flow and pull request process
     - Assigned Tasks
     - Reviewed Sara's pull request and merged
-
+- Resources
+    - Git commands to remember
+        - Check current project status: <code>git status</code>
+        - Create a new branch: <code>git checkout -b name-of-branch</code> (feature in name)
+        - Add changes: <code>git add .</code>
+        - Committing: <code>git commit -m "Commit message"</code> (commit in present tense)
+        - Pulling: <code>git pull</code>
+        - Pushing branch: <code>git push</code>
+            - If this doesn't push run this: <code>git push --set-upstream origin branch-name</code>
