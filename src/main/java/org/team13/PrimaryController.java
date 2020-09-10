@@ -6,6 +6,10 @@ import javafx.scene.control.*;
 
 public class PrimaryController {
 
+    private boolean operandClicked = false;
+    private String operandMode = "";
+    private boolean isDecimal = false;
+
     @FXML
     private TextField numberField;
 
@@ -27,27 +31,49 @@ public class PrimaryController {
     @FXML
     private void clearNumberField() {
         numberField.clear();
+        operandClicked = false;
+        operandMode = "";
     }
 
     @FXML
     private void multiplyClicked() {
         //NOTE: to get current information from numberField use .getText() method
         //runs when multiButton is clicked
+        if (!operandClicked){
+            numberField.appendText("*");
+            operandClicked = true;
+            operandMode = "\\*";
+        }
     }
 
     @FXML
     private void divideClicked() {
         //runs when divisionButton is clicked
+        if (!operandClicked){
+            numberField.appendText("/");
+            operandClicked = true;
+            operandMode = "\\/";
+        }
     }
 
     @FXML
     private void addClicked(){
         //runs when additionButton is clicked
+        if (!operandClicked){
+            numberField.appendText("+");
+            operandClicked = true;
+            operandMode = "\\+";
+        }
     }
 
     @FXML
     private void subtractClicked() {
         //runs when subtractionButton is clicked
+        if (!operandClicked){
+            numberField.appendText("-");
+            operandClicked = true;
+            operandMode = "\\-";
+        }
     }
 
     @FXML
@@ -63,11 +89,46 @@ public class PrimaryController {
     @FXML
     private void equalClicked() {
         //runs when equalsButton is clicked
+        String operation = numberField.getText();
+        String[] numbers = operation.split(operandMode);
+        Integer leftSide = Integer.parseInt(numbers[0],2);
+        Integer rightSide = Integer.parseInt(numbers[1],2);
+
+        Integer result;
+        switch(operandMode){
+            case("\\+"):
+                result = leftSide + rightSide;
+                numberField.setText(Integer.toBinaryString(result));
+                break;
+            case("\\-"):
+                result = leftSide - rightSide;
+                numberField.setText(Integer.toBinaryString(result));
+                break;
+            case("\\/"):
+                result = leftSide/rightSide;
+                numberField.setText(Integer.toBinaryString(result));
+                break;
+            case("\\*"):
+                result = leftSide*rightSide;
+                numberField.setText(Integer.toBinaryString(result));
+                break;
+        }
     }
 
     @FXML
     private void convertButtonClicked() {
         //runs when convertButton is clicked
+        if (isDecimal){
+            String decimal = numberField.getText();
+            String integer = Integer.toBinaryString(Integer.parseInt(decimal));
+            numberField.setText(integer);
+            isDecimal=false;
+        }else {
+            String binary = numberField.getText();
+            Integer integer = Integer.parseInt(binary, 2);
+            numberField.setText(integer.toString());
+            isDecimal=true;
+        }
     }
 
 }
