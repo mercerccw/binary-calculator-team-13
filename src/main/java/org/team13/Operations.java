@@ -17,4 +17,25 @@ public interface Operations {
         String convertedNumber = convertBinaryOrDecimal(number, true);
         return Integer.toString(Integer.parseInt(convertedNumber) * Integer.parseInt(convertedNumber));
     }
+    static String addNums(String number1, String number2){
+        String convertedNumber1 = convertBinaryOrDecimal(number1, true);
+        String convertedNumber2 = convertBinaryOrDecimal(number2,true);
+        return Integer.toString(Integer.parseInt(convertedNumber1) + Integer.parseInt(convertedNumber2));
+    }
+    static String subtractNums(String number1, String number2){
+        String convertedNumber1 = convertBinaryOrDecimal(number1, true);
+        String convertedNumber2 = convertBinaryOrDecimal(number2,true);
+        return Integer.toString(Integer.parseInt(convertedNumber1) - Integer.parseInt(convertedNumber2));
+    }
+    static String divideNums(String number1, String number2){
+        String convertedNumber1 = convertBinaryOrDecimal(number1, true);
+        String convertedNumber2 = convertBinaryOrDecimal(number2,true);
+        return Integer.toString(Integer.parseInt(convertedNumber1) / Integer.parseInt(convertedNumber2));
+    }
+    static String multiplyNums(String number1, String number2){
+        String convertedNumber1 = convertBinaryOrDecimal(number1, true);
+        String convertedNumber2 = convertBinaryOrDecimal(number2,true);
+        return Integer.toString(Integer.parseInt(convertedNumber1) * Integer.parseInt(convertedNumber2));
+    }
+
 }

@@ -26,4 +26,32 @@ class OperationsTest {
         assertEquals(Operations.findSquare("101"), "25");
         assertEquals(Operations.findSquare("1100"), "144");
     }
+
+    @Test
+    void addNums() {
+        assertEquals(Operations.addNums("1000","1000"),"16");
+        assertEquals(Operations.addNums("1001","1101"),"22");
+        assertEquals(Operations.addNums("10111101","1011100001"),"926");
+    }
+
+    @Test
+    void subtractNums() {
+        assertEquals(Operations.subtractNums("1000","0001"),"7");
+        assertEquals(Operations.subtractNums("1100","1111"),"-3");
+        assertEquals(Operations.subtractNums("11111","11100"),"3");
+    }
+
+    @Test
+    void divideNums() {
+        assertEquals(Operations.divideNums("1110","0110"),"2");
+        assertEquals(Operations.divideNums("11111","100"),"7");
+        assertEquals(Operations.divideNums("101010","1110"),"3");
+    }
+
+    @Test
+    void multiplyNums() {
+        assertEquals(Operations.multiplyNums("1010","1010"),"100");
+        assertEquals(Operations.multiplyNums("1000","0010"),"16");
+        assertEquals(Operations.multiplyNums("1100","1111"),"180");
+    }
 }
