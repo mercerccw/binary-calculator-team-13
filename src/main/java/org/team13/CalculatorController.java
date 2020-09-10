@@ -1,7 +1,5 @@
 package org.team13;
 
-import java.io.IOException;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.lang.*;
@@ -84,6 +82,9 @@ public class CalculatorController {
     @FXML
     private void equalClicked() {
         //runs when equalsButton is clicked
+        String[] input = Operations.sanitize(evaluatedAnswer.getText());
+        numberField.setText(Operations.evaluate(input));
+
 
     }
 

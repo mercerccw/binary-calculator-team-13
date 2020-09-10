@@ -54,4 +54,17 @@ class OperationsTest {
         assertEquals(Operations.multiplyNums("1000","0010"),"16");
         assertEquals(Operations.multiplyNums("1100","1111"),"180");
     }
+
+    @Test
+    void sanitize(){
+        String[] expectedAddition = {"0101","\\+","0010"};
+        assertEquals(Operations.sanitize("0101+0010"),expectedAddition);
+    }
+
+    @Test
+    void evaluate(){
+        String[] addition = {"0101","\\+","0010"};
+        String result = "7";
+        assertEquals(Operations.evaluate(addition),result);
+    }
 }
