@@ -26,4 +26,11 @@ class OperationsTest {
         assertEquals(Operations.findSquare("101"), "25");
         assertEquals(Operations.findSquare("1100"), "144");
     }
+
+    @Test
+    void addNums() {
+        assertEquals(Operations.addNums("1000","1000"),"16");
+        assertEquals(Operations.addNums("1001","1101"),"22");
+        assertEquals(Operations.addNums("10111101","1011100001"),"926");
+    }
 }
