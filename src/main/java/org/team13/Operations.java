@@ -27,6 +27,11 @@ public interface Operations {
         String convertedNumber2 = convertBinaryOrDecimal(number2,true);
         return Integer.toString(Integer.parseInt(convertedNumber1) - Integer.parseInt(convertedNumber2));
     }
+    static String divideNums(String number1, String number2){
+        String convertedNumber1 = convertBinaryOrDecimal(number1, true);
+        String convertedNumber2 = convertBinaryOrDecimal(number2,true);
+        return Integer.toString(Integer.parseInt(convertedNumber1) / Integer.parseInt(convertedNumber2));
+    }
     static String multiplyNums(String number1, String number2){
         String convertedNumber1 = convertBinaryOrDecimal(number1, true);
         String convertedNumber2 = convertBinaryOrDecimal(number2,true);

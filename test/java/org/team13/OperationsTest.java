@@ -42,6 +42,13 @@ class OperationsTest {
     }
 
     @Test
+    void divideNums() {
+        assertEquals(Operations.divideNums("1110","0110"),"2");
+        assertEquals(Operations.divideNums("11111","100"),"7");
+        assertEquals(Operations.divideNums("101010","1110"),"3");
+    }
+
+    @Test
     void multiplyNums() {
         assertEquals(Operations.multiplyNums("1010","1010"),"100");
         assertEquals(Operations.multiplyNums("1000","0010"),"16");
