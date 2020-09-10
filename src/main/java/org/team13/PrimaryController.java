@@ -58,7 +58,7 @@ public class PrimaryController {
 
     @FXML
     private void addClicked(){
-        //runs when additionButton is clicked
+        //runs when additionButton is clicked.
         if (!operandClicked){
             numberField.appendText("+");
             operandClicked = true;
