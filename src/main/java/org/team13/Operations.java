@@ -13,4 +13,8 @@ public interface Operations {
         }
         return Integer.toBinaryString(Integer.parseInt(number));
     }
+    static String findSquare(String number) {
+        String convertedNumber = convertBinaryOrDecimal(number, true);
+        return Integer.toString(Integer.parseInt(convertedNumber) * Integer.parseInt(convertedNumber));
+    }
 }

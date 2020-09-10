@@ -58,7 +58,9 @@ public class CalculatorController {
     @FXML
     private void squareClicked() {
         //runs when squaredButton is clicked
-
+        if(numberField != null) {
+            evaluatedAnswer.setText(Operations.findSquare(numberField.getText()));
+        }
     }
 
     @FXML
