@@ -41,3 +41,13 @@ work will be merged to <code>master</code>.
         - Pulling: <code>git pull</code>
         - Pushing branch: <code>git push</code>
             - If this doesn't push run this: <code>git push --set-upstream origin branch-name</code>
+            
+#### 9/9/2020 11:30PM
+
+- Attendance: 
+    - Clayton, Zach
+- Topics: 
+    - Talked about dependency updates
+    - Discussed Testing suite
+    - Discussed Git practices
+
