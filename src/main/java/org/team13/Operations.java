@@ -3,9 +3,9 @@ package org.team13;
 import java.lang.*;
 
 public interface Operations {
-    static double findSqrt(String number) {
+    static int findSqrt(String number) {
         String convertedNumber = convertBinaryOrDecimal(number, true);
-        return Math.sqrt(Double.parseDouble(convertedNumber));
+        return (int) Math.sqrt(Integer.parseInt(convertedNumber));
     }
     static String convertBinaryOrDecimal(String number, Boolean isBinary){
         if(isBinary){

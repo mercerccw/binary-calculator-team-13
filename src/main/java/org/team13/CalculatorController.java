@@ -58,17 +58,27 @@ public class CalculatorController {
     @FXML
     private void squareClicked() {
         //runs when squaredButton is clicked
-        if(numberField != null) {
-            evaluatedAnswer.setText(Operations.findSquare(numberField.getText()));
+        try {
+            if(numberField != null) {
+                evaluatedAnswer.setText(Operations.findSquare(numberField.getText()));
+            }
+        } catch (Exception e){
+            System.out.println("Invalid number entered: " + e);
         }
+
     }
 
     @FXML
     private void sqrtClicked() {
         //runs when sqrtButton is clicked
-        if(numberField != null) {
-            evaluatedAnswer.setText(Double.toString(Operations.findSqrt(numberField.getText())));
+        try {
+            if(numberField != null) {
+                evaluatedAnswer.setText(Integer.toString(Operations.findSqrt(numberField.getText())));
+            }
+        } catch (Exception e){
+            System.out.println("Invalid number entered: " + e);
         }
+
     }
 
     @FXML
@@ -97,9 +107,14 @@ public class CalculatorController {
     @FXML
     private void toDecimal() {
         //runs when toDecimal is clicked
-        if(numberField != null) {
-            evaluatedAnswer.setText(Operations.convertBinaryOrDecimal(numberField.getText(), true));
+        try {
+            if(numberField != null) {
+                evaluatedAnswer.setText(Operations.convertBinaryOrDecimal(numberField.getText(), true));
+            }
+        } catch (Exception e){
+            System.out.println("Invalid number entered: " + e);
         }
+
     }
 
 
