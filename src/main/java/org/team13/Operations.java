@@ -38,7 +38,7 @@ public interface Operations {
         return Integer.toString(Integer.parseInt(convertedNumber1) * Integer.parseInt(convertedNumber2));
     }
     static String[] sanitize(String input){
-        String[] string = input.split("\\+|\\-|\\/|\\*");
+        String[] string = input.split("\\+|\\-|/|\\*");
         char operand = input.charAt(string[0].length());
         String[] result = new String[3];
         result[0] = string[0];
