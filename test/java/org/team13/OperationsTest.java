@@ -33,4 +33,11 @@ class OperationsTest {
         assertEquals(Operations.addNums("1001","1101"),"22");
         assertEquals(Operations.addNums("10111101","1011100001"),"926");
     }
+
+    @Test
+    void multiplyNums() {
+        assertEquals(Operations.multiplyNums("1010","1010"),"100");
+        assertEquals(Operations.multiplyNums("1000","0010"),"16");
+        assertEquals(Operations.multiplyNums("1100","1111"),"180");
+    }
 }
