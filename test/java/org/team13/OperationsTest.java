@@ -35,6 +35,13 @@ class OperationsTest {
     }
 
     @Test
+    void subtractNums() {
+        assertEquals(Operations.subtractNums("1000","0001"),"7");
+        assertEquals(Operations.subtractNums("1100","1111"),"-3");
+        assertEquals(Operations.subtractNums("11111","11100"),"3");
+    }
+
+    @Test
     void multiplyNums() {
         assertEquals(Operations.multiplyNums("1010","1010"),"100");
         assertEquals(Operations.multiplyNums("1000","0010"),"16");
