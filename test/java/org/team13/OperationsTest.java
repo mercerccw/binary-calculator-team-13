@@ -4,10 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PrimaryControllerTest {
+class OperationsTest {
 
     @Test
     void findSqrt() {
-        assertEquals(5,5);
+    }
+
+    @Test
+    void convertBinaryOrDecimal() {
     }
 }

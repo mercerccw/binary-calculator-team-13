@@ -1,19 +1,20 @@
 package org.team13;
 
 import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import java.lang.*;
 
-public class PrimaryController {
+public class CalculatorController {
+    @FXML
+    private Button ToggleButton;
     @FXML
     private Label evaluatedAnswer;
     @FXML
     private TextField numberField;
+    private Boolean isBinary = false;
 
-    @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
-    }
 
     @FXML
     private void enterZero() {
@@ -28,6 +29,9 @@ public class PrimaryController {
     @FXML
     private void clearNumberField() {
         numberField.clear();
+        evaluatedAnswer.setText("-");
+        ToggleButton.setText("Binary");
+        isBinary = false;
     }
 
     @FXML
@@ -61,21 +65,8 @@ public class PrimaryController {
     private void sqrtClicked() {
         //runs when sqrtButton is clicked
         if(numberField != null) {
-            double sqrt = findSqrt(Double.parseDouble(numberField.getCharacters().toString()));
-            System.out.println(sqrt);
-            evaluatedAnswer.setText(Double.toString(sqrt));
+            evaluatedAnswer.setText(Double.toString(Operations.findSqrt(numberField.getText())));
         }
-    }
-
-    public double findSqrt(double n) {
-        double left = 0;
-        double right = n + 1;
-        while(right - left >= 2) {
-            double mid = (left + right) / 2;
-            if(mid * mid <= n) left = mid;
-            else right = mid;
-        }
-        return left;
     }
 
     @FXML
@@ -85,8 +76,30 @@ public class PrimaryController {
     }
 
     @FXML
-    private void convertButtonClicked() {
-        //runs when convertButton is clicked
+    private void toggleType(){
+        if(!evaluatedAnswer.getText().equals("-")) {
+            try {
+                evaluatedAnswer.setText(Operations.convertBinaryOrDecimal(Integer.toString(Integer.parseInt(evaluatedAnswer.getText())), isBinary));
+                if(isBinary)
+                    ToggleButton.setText("Binary");
+                else
+                    ToggleButton.setText("Integer");
+                isBinary = !isBinary;
+            } catch (Exception e) {
+                System.out.println("Exception: " + e);
+            }
+
+        }
     }
+
+    @FXML
+    private void toDecimal() {
+        //runs when toDecimal is clicked
+        if(numberField != null) {
+            evaluatedAnswer.setText(Operations.convertBinaryOrDecimal(numberField.getText(), true));
+        }
+    }
+
+
 
 }
