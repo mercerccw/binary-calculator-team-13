@@ -46,7 +46,9 @@ Tasks
 - Followed git practices
 ### Brian Ringer
 Tasks
-
+-Added operation for sanitizing input
+-Added operation for evaluating input
+-wrote tests for sanitize and evaluate
 - Followed git practices
 ## Meetings
 

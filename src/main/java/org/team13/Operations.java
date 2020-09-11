@@ -37,5 +37,34 @@ public interface Operations {
         String convertedNumber2 = convertBinaryOrDecimal(number2,true);
         return Integer.toString(Integer.parseInt(convertedNumber1) * Integer.parseInt(convertedNumber2));
     }
+    static String[] sanitize(String input){
+        String[] string = input.split("\\+|-|/|\\*");
+        char operand = input.charAt(string[0].length());
+        String[] result = new String[3];
+        result[0] = string[0];
+        result[1] = Character.toString(operand);
+        result[2] = string[1];
+        return result;
+    }
+    static String evaluate(String[] parts){
+        String LHS = parts[0];
+        String RHS = parts[2];
+        String result = "";
+        switch (parts[1]){
+            case("\\+"):
+                result = addNums(LHS,RHS);
+                break;
+            case("\\-"):
+                result = subtractNums(LHS,RHS);
+                break;
+            case("\\*"):
+                result = multiplyNums(LHS,RHS);
+                break;
+            case("\\/"):
+                result = divideNums(LHS,RHS);
+                break;
+        }
+        return result;
+    }
 
 }
