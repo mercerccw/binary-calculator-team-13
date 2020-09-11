@@ -82,8 +82,12 @@ public class CalculatorController {
     @FXML
     private void equalClicked() {
         //runs when equalsButton is clicked
-        String[] input = Operations.sanitize(evaluatedAnswer.getText());
-        numberField.setText(Operations.evaluate(input));
+        try{
+            String[] input = Operations.sanitize(evaluatedAnswer.getText());
+            numberField.setText(Operations.evaluate(input));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
     }
