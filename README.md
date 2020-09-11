@@ -21,12 +21,40 @@ the branch name) and submit a pull request from the completed feature branch to 
 Once all features have been completed on <code>develop</code> for the final version, a final pull request will be submitted and all previous
 work will be merged to <code>master</code>.  
 
+## Team Task Distribution
+### Clayton Mercer
+Tasks
+- Setup JavaFX and JUnit testing
+- Built out <code>Operator</code> interface for all logic to be called by the app controller 
+- Added testing for logic
+- Implemented square root, squared, and decimal operation methods
+- Wrote logic for binary to decimal conversion toggle
+- Followed git practices
+### Sara Bailey
+Tasks
+- Built out UI in JavaFX
+- Wrote good quality naming for UI components
+- Added app controller methods for buttons
+- Followed git practices
+### Zach Hoeing
+Tasks
+
+- Followed git practices
+### Nicholas Burrell
+Tasks
+
+- Followed git practices
+### Brian Ringer
+Tasks
+
+- Followed git practices
 ## Meetings
 
-#### 9/8/2020 7:30PM
+#### 9/8/2020 7:30PM (Zoom)
 
 - Attendance: 
     - Clayton, Zach, Nicholas
+    - Sara (Exempt)
 - Topics: 
     - Covered project requirements and initial setup
     - Reviewed git flow and pull request process
@@ -42,7 +70,7 @@ work will be merged to <code>master</code>.
         - Pushing branch: <code>git push</code>
             - If this doesn't push run this: <code>git push --set-upstream origin branch-name</code>
             
-#### 9/9/2020 11:30PM
+#### 9/9/2020 11:30PM (Zoom)
 
 - Attendance: 
     - Clayton, Zach
@@ -50,4 +78,13 @@ work will be merged to <code>master</code>.
     - Talked about dependency updates
     - Discussed Testing suite
     - Discussed Git practices
+
+#### 9/10/2020 6:30PM (Zoom)
+
+- Attendance: 
+    - Clayton, Zach, Brian, Nicholas
+    - Sara (Exempt)
+- Topics: 
+    - Divided up final tasks for v1.0.0
+    - Verified non-functional and function task requirements
 
