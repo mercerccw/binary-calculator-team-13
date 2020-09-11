@@ -46,9 +46,10 @@ Tasks
 - Followed git practices
 ### Brian Ringer
 Tasks
--Added operation for sanitizing input
--Added operation for evaluating input
--wrote tests for sanitize and evaluate
+- Added operation for sanitizing input
+- Added operation for evaluating input
+- wrote tests for sanitize and evaluate
+- Edited Operations to display proper negative numbers
 - Followed git practices
 ## Meetings
 
