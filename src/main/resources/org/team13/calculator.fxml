@@ -9,7 +9,7 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <TextField fx:id="numberField" prefHeight="36.0" prefWidth="152.0" />
+    <Label fx:id="numberField" prefHeight="36.0" prefWidth="152.0" />
    <Label fx:id="evaluatedAnswer" text="-" />
    <Button mnemonicParsing="false" text="Binary" onMouseClicked="#toggleType" fx:id="ToggleButton"/>
     <AnchorPane prefHeight="200.0" prefWidth="200.0">

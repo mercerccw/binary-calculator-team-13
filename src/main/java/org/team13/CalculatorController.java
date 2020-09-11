@@ -10,23 +10,23 @@ public class CalculatorController {
     @FXML
     private Label evaluatedAnswer;
     @FXML
-    private TextField numberField;
+    private Label numberField;
     private Boolean isBinary = false;
 
 
     @FXML
     private void enterZero() {
-        numberField.appendText("0");
+        numberField.setText(numberField.getText()+ "0");
     }
 
     @FXML
     private void enterOne() {
-        numberField.appendText("1");
+        numberField.setText(numberField.getText() + "1");
     }
 
     @FXML
     private void clearNumberField() {
-        numberField.clear();
+        numberField.setText("");
         evaluatedAnswer.setText("-");
         ToggleButton.setText("Binary");
         isBinary = false;
@@ -36,21 +36,25 @@ public class CalculatorController {
     private void multiplyClicked() {
         //NOTE: to get current information from numberField use .getText() method
         //runs when multiButton is clicked
+        numberField.setText(numberField.getText() + "*");
     }
 
     @FXML
     private void divideClicked() {
         //runs when divisionButton is clicked
+        numberField.setText(numberField.getText() + "/");
     }
 
     @FXML
     private void addClicked(){
         //runs when additionButton is clicked
+        numberField.setText(numberField.getText() + "+");
     }
 
     @FXML
     private void subtractClicked() {
         //runs when subtractionButton is clicked
+        numberField.setText(numberField.getText() + "-");
     }
 
     @FXML
