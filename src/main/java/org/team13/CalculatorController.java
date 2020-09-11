@@ -83,8 +83,8 @@ public class CalculatorController {
     private void equalClicked() {
         //runs when equalsButton is clicked
         try{
-            String[] input = Operations.sanitize(evaluatedAnswer.getText());
-            numberField.setText(Operations.evaluate(input));
+            String[] input = Operations.sanitize(numberField.getText());
+            evaluatedAnswer.setText(Operations.evaluate(input));
         } catch (Exception e) {
             e.printStackTrace();
         }

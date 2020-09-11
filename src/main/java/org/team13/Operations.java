@@ -7,9 +7,20 @@ public interface Operations {
         String convertedNumber = convertBinaryOrDecimal(number, true);
         return (int) Math.sqrt(Integer.parseInt(convertedNumber));
     }
-    static String convertBinaryOrDecimal(String number, Boolean isBinary){
-        if(isBinary){
+    static String convertBinaryOrDecimal(String number, Boolean isBinary) {
+        boolean isNeg = false;
+        if (Character.toString(number.charAt(0)).equals("-")) {
+            number = number.substring(1);
+            isNeg = true;
+        }
+        if (isBinary) {
+            if (isNeg) {
+                return "-"+ Integer.parseInt(number, 2);
+            }
             return Integer.toString(Integer.parseInt(number, 2));
+        }
+        if (isNeg) {
+            return "-"+Integer.toBinaryString(Integer.parseInt(number));
         }
         return Integer.toBinaryString(Integer.parseInt(number));
     }
@@ -51,16 +62,16 @@ public interface Operations {
         String RHS = parts[2];
         String result = "";
         switch (parts[1]){
-            case("\\+"):
+            case("+"):
                 result = addNums(LHS,RHS);
                 break;
-            case("\\-"):
+            case("-"):
                 result = subtractNums(LHS,RHS);
                 break;
-            case("\\*"):
+            case("*"):
                 result = multiplyNums(LHS,RHS);
                 break;
-            case("\\/"):
+            case("/"):
                 result = divideNums(LHS,RHS);
                 break;
         }
