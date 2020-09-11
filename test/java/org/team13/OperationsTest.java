@@ -64,7 +64,7 @@ class OperationsTest {
 
     @Test
     void evaluate(){
-        String[] addition = {"0101","\\+","0010"};
+        String[] addition = {"0101","+","0010"};
         String result = "7";
         assertEquals(Operations.evaluate(addition),result);
     }
