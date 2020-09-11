@@ -51,16 +51,16 @@ public interface Operations {
         String RHS = parts[2];
         String result = "";
         switch (parts[1]){
-            case("\\+"):
+            case("+"):
                 result = addNums(LHS,RHS);
                 break;
-            case("\\-"):
+            case("-"):
                 result = subtractNums(LHS,RHS);
                 break;
-            case("\\*"):
+            case("*"):
                 result = multiplyNums(LHS,RHS);
                 break;
-            case("\\/"):
+            case("/"):
                 result = divideNums(LHS,RHS);
                 break;
         }
