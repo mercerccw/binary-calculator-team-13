@@ -11,6 +11,18 @@ Members
 Requirements
 - [Install Java JDK 14](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html)
 
+##Manual
+![calculator](Calculator.png)
+
+How to:
+- To enter numbers, click the <code>0</code> or <code>1</code> buttons
+- To enter in an operator, press the <code>+</code>, <code>-</code>, <code>*</code>, or <code>/</code> buttons
+- Once your equation is entered, press the <code>=</code> button and the answer will be shown in decimal form
+- To switch between decimal or binary form after the <code>=</code> button is pressed, click the <code>Binary</code>/<code>Integer</code> underneath the answer
+- To find the square or square root of a single input, press the <code>x^2</code> or <code>sqrt(x)</code> buttons
+- To convert a single number from binary to decimal, enter in your number and then press the <code>Convert to Decimal</code> button
+- To clear the input and output areas, press the <code>clear</code> button
+
 ## Git Practices
 The <code>master</code> branch and <code>develop</code> branch are restricted and thus cannot be pushed to directly. 
 In order to merge into <code>master</code> or <code>develop</code>, a pull request must be submitted and approved by 3 developers.
@@ -43,7 +55,9 @@ Tasks
 - Followed git practices
 ### Nicholas Burrell
 Tasks
-
+- Implemented addition, subtraction, multiplication, division, and equals buttons
+- Fixed evaluation method
+- Wrote manual for calculator
 - Followed git practices
 ### Brian Ringer
 Tasks
