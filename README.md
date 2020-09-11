@@ -38,7 +38,8 @@ Tasks
 - Followed git practices
 ### Zach Hoeing
 Tasks
-
+- Implemented addition, subtraction, multiplication, and division operation methods
+- Add testing for operations
 - Followed git practices
 ### Nicholas Burrell
 Tasks
