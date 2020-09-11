@@ -11,7 +11,7 @@ Members
 Requirements
 - [Install Java JDK 14](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html)
 
-##Manual
+## Manual
 ![calculator](Calculator.png)
 
 How to:
