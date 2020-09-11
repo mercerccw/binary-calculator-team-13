@@ -57,8 +57,9 @@ class OperationsTest {
 
     @Test
     void sanitize(){
-        String[] expectedAddition = {"0101","\\+","0010"};
-        assertEquals(Operations.sanitize("0101+0010"),expectedAddition);
+        String expectedAddition = "+";
+        System.out.println(Operations.sanitize("0101+0010"));
+        assertEquals(Operations.sanitize("0101+0010")[1],expectedAddition);
     }
 
     @Test
